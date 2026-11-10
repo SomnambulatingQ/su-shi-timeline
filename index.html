@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>苏轼人生经历 · 时间轴对话课</title>
+<meta name="description" content="部编版初中语文人物传记学习：沿时间与山河，点亮四个节点，听东坡讲他的密州与黄州。">
+<meta name="theme-color" content="#EFE8D9">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">苏</span>
+      <div>
+        <span class="eyebrow">部编版初中语文 · 人物传记学习</span>
+        <h1>苏轼人生经历</h1>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="ghost-btn" id="btnMute" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" class="ico on" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="M15 9.5a3.5 3.5 0 0 1 0 5"/><path d="M17.5 7a7 7 0 0 1 0 10"/></svg>
+        <svg viewBox="0 0 24 24" class="ico off" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Z"/><path d="m16 9 4 6M20 9l-4 6"/></svg>
+        <span id="muteLabel">声音开</span>
+      </button>
+      <button class="ghost-btn" id="btnReset" type="button">
+        <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+        <span>重新开始</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">一蓑烟雨任平生</span>
+        <h2>沿着时间与山河，<br><em>读懂一个乐观的灵魂</em></h2>
+        <p>从密州到黄州，四部经典作品串起苏轼人生中重要的心灵转折。每一站，都是他与命运相逢后留下的回答。</p>
+        <div class="hero-rule">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>
+          <span>请按顺序点亮人生节点，完成一段与东坡先生的相遇。</span>
+        </div>
+      </div>
+      <button class="su-avatar-btn" id="btnChat" type="button" aria-label="与苏轼对话">
+        <img src="assets/portrait.jpg" alt="苏轼人物画像">
+        <span>点击人物<br><b>与我谈一谈</b></span>
+        <i aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/></svg>
+        </i>
+      </button>
+    </section>
+
+    <section class="timeline-card">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE ROAD OF DONGPO</span>
+          <h2>沿时间与山河，读苏轼的一生</h2>
+          <p class="section-subtitle">从眉山出发，所有人生节点沿同一条曲线，按时间顺序依次点亮。</p>
+        </div>
+        <span class="progress-pill" id="pill">已探索 0 / 4</span>
+      </div>
+
+      <div class="map-stage" id="mapStage">
+        <div class="map-wash wash-one" aria-hidden="true"></div>
+        <div class="map-wash wash-two" aria-hidden="true"></div>
+        <div class="direction-note">时间由早到晚 · 节点沿同一条人生曲线排列</div>
+        <svg class="curved-route" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M90 395 Q110 190 150 250 Q185 310 210 307 Q248 304 280 374 Q315 445 350 250 Q385 75 420 120 Q460 170 500 244 Q540 318 580 364 Q620 410 660 244 Q700 78 730 140 Q765 205 800 244 Q835 285 870 364 Q915 425 960 224"/>
+        </svg>
+        <div id="nodes"></div>
+      </div>
+
+      <div class="timeline-legend">
+        <span><i class="legend-dot active"></i>当前可探索</span>
+        <span><i class="legend-dot done"></i>已完成</span>
+        <span><i class="legend-dot locked"></i>待解锁</span>
+      </div>
+    </section>
+
+    <section class="study-tip">
+      <div>
+        <span class="eyebrow">人生导览</span>
+        <h3>沿着时间，遇见作品</h3>
+      </div>
+      <p>每一个节点，都对应苏轼生命中的一段经历。点开后可以听东坡亲口讲这一段，也可以阅读第一人称叙事，看看他如何把风雨、月色、江山与日常写进作品。</p>
+      <div class="work-tags">
+        <span>《江城子·密州出猎》</span>
+        <span>《水调歌头》</span>
+        <span>《赤壁赋》</span>
+        <span>《记承天寺夜游》</span>
+      </div>
+    </section>
+
+    <section class="life-summary" id="summary" hidden>
+      <div class="summary-art">
+        <img src="assets/portrait.jpg" alt="苏轼人物画像">
+        <span class="summary-stamp">东坡</span>
+      </div>
+      <div class="summary-copy">
+        <span class="eyebrow">走完这四站</span>
+        <h2 id="summaryTitle">他是什么样的人？</h2>
+        <div class="summary-points" id="summaryPoints"></div>
+        <div class="summary-quote">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H8l-4 4V5Z"/></svg>
+          <span>回首向来萧瑟处，归去，也无风雨也无晴。</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    <span>每一次点亮，都是一次与经典相遇。</span>
+    <span>声音由 AI 合成 · 内容依据部编版初中语文整理</span>
+  </footer>
+</div>
+
+<!-- 叙事弹窗 -->
+<div class="modal-backdrop" id="storyModal" hidden>
+  <div class="story-modal" role="dialog" aria-modal="true" aria-labelledby="storyTitle">
+    <button class="icon-btn close-btn" id="storyClose" type="button" aria-label="关闭">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="story-art">
+      <img src="assets/portrait.jpg" alt="苏轼人物画像">
+      <span class="portrait-seal">东坡</span>
+    </div>
+    <div class="story-body">
+      <span class="eyebrow" id="storyEyebrow"></span>
+      <h2 id="storyTitle"></h2>
+      <div class="story-meta" id="storyMeta"></div>
+      <p class="first-person" id="storyText"></p>
+
+      <div class="audio-row">
+        <button class="play-btn" id="storyPlay" type="button" aria-label="播放东坡讲述">
+          <svg class="ico play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="ico pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM14 5h3v14h-3z"/></svg>
+        </button>
+        <div class="audio-bar" id="storyBar" role="slider" tabindex="0" aria-label="语音进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="storyFill"></i></div>
+        <span class="audio-time" id="storyTime">0:00</span>
+        <span class="audio-hint">听东坡讲这一段</span>
+      </div>
+
+      <div class="value-box">
+        <span>情感态度与价值观</span>
+        <p id="storyValue"></p>
+      </div>
+      <button class="primary-btn" id="storyNext" type="button">读完这一站，继续向前 <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- 对话弹窗 -->
+<div class="modal-backdrop" id="chatModal" hidden>
+  <div class="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+    <div class="chat-head">
+      <div class="chat-person">
+        <img src="assets/portrait.jpg" alt="苏轼人物画像">
+        <div>
+          <span class="eyebrow">东坡智能对话</span>
+          <h2 id="chatTitle">与苏轼谈一谈</h2>
+        </div>
+      </div>
+      <button class="icon-btn" id="chatClose" type="button" aria-label="关闭">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="quick-prompts" id="quickPrompts"></div>
+
+    <div class="chat-messages" id="chatLog" aria-live="polite"></div>
+
+    <form class="chat-input" id="chatForm" autocomplete="off">
+      <input id="chatInput" type="text" maxlength="60" placeholder="输入你想问苏轼的问题" aria-label="输入问题">
+      <button class="primary-btn send-btn" type="submit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-8-8 18-2-8-8-2Z"/></svg>
+        <span>发送</span>
+      </button>
+    </form>
+    <p class="chat-note">回答由预置文本合成，语音由 AI 生成；情绪困扰请及时寻求老师、家长或朋友帮助。</p>
+  </div>
+</div>
+
+<audio id="fxAudio" preload="auto" hidden></audio>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
